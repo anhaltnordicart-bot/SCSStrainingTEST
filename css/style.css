@@ -113,5 +113,10 @@ nav a:hover .active {
 }
 .header-img a {
   background-color: #388071;
+  padding: 0.8em 1em;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
   position: absolute;
 }/*# sourceMappingURL=style.css.map */
