@@ -17,11 +17,24 @@ justify-content: $justify;
 align-items: $align;
 }
 
-@mixin btn($bgColor: $primaryColor, $btn-padding: 0.8em 1em){
+@mixin btn($bgColor: $primaryColor, $btn-padding: 0.8em 1em, $hover-bg: $secondaryColor, $hover-color: #fff){
     background-color: $bgColor;
     padding: $btn-padding;
     border-radius: 8px;
     color: #fff;
     text-decoration: none;
     text-align: center;
+
+        &:hover{
+            background-color: $hover-bg;
+            transition: 0.3s ease-in-out;
+            color: $hover-color;
+          }
+}
+
+@mixin cta-box($width: 20vw){
+     background-color: #fff;
+     width: $width;
+     padding: 2em;
+     margin: 2em auto;
 }

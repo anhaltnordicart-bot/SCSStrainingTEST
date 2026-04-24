@@ -119,4 +119,56 @@ nav a:hover .active {
   text-decoration: none;
   text-align: center;
   position: absolute;
+}
+.header-img a:hover {
+  background-color: #133833;
+  transition: 0.3s ease-in-out;
+}
+
+/*Forsiden main styling*/
+main {
+  grid-column: 1/6; /*fylder fulde bredde*/
+  display: grid;
+  grid-template-columns: repeat 6, 1fr;
+}
+main .cta-wrapper {
+  grid-column: 1/7; /*den er 1/6 skal indkaples*/
+}
+main .cta-wrapper h2 {
+  text-align: center;
+  font-size: 30px;
+}
+main .cta-wrapper .cta-bokse {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*cta bokse*/
+.cta-1, .cta-2, .cta-3 {
+  background-color: #fff;
+  width: 20vw;
+  padding: 2em;
+  margin: 2em auto;
+}
+.cta-1 img, .cta-2 img, .cta-3 img {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+.cta-1 p, .cta-2 p, .cta-3 p {
+  margin-bottom: 2em;
+}
+.cta-1 a, .cta-2 a, .cta-3 a {
+  background-color: #388071;
+  padding: 0.8em 1em;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: block; /*display block gør at elementet fylder hele sin container dvs knappen her
+*/
+}
+.cta-1 a:hover, .cta-2 a:hover, .cta-3 a:hover {
+  background-color: #133833;
+  transition: 0.3s ease-in-out;
 }/*# sourceMappingURL=style.css.map */
