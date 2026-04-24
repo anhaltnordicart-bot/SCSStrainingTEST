@@ -177,7 +177,7 @@ body{
   .txt-img-section {
     grid-column: 1/7;
     display: grid;
-    grid-template-columns: repeat (7, 1fr);
+    grid-template-columns: repeat(7, 1fr);
   }
 
   .tekst{
@@ -186,7 +186,7 @@ body{
     padding: 2em 4em 4em 4em;
 
       p, h2{
-        color: partial.$bg-color;
+        color: partial.$bgColor;
       }
 
       p:nth-of-type(4){
@@ -198,8 +198,96 @@ body{
       }
 
       .secondary-btn{
-        @include partial.btn($bg-color:transparent, $hover-bg:#fff, $hover-color: partial.$secondary-color);
+        @include partial.btn($bgColor:transparent, $hover-bg:#fff, $hover-color: partial.$secondaryColor);
         border: 2px solid #fff;
       }
 
+  }
+  
+  /*DETTE VIRKER IKKE INGEN BILLEDE*/
+  .billede{
+    grid-column: 5/8;
+    background-image: url(../img/presentation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*kontaktformular*/
+
+  .kontakt-bg-img{
+    grid-column: 1/7;
+    background: linear-gradient(rgba(142,142,142,0.8), rgba(142,142,142, 0.8)),
+    url(../img/meeting.jpg);/*grå grå grå og opasiteten*/
+    background-size: cover;
+  }
+
+  .kontaktform{
+    background-color: partial.$bgColor;
+    border-radius: 5px;
+    padding: 1.3em;
+    width: 50%;
+    margin: 4em auto; /*4em top og bund og auto centrere formen*/
+
+
+      h2{
+        font-size: 25px;
+        margin-bottom: 0;
+        margin-left: 0.5em;
+      }
+
+      p{
+        margin-left: 1em;
+      }
+
+      .section-form{
+        display: flex;
+
+      }
+  }
+
+  /*styling af indpout felter */
+
+  input[type=text], input[type=email], input[type=tel], select, textarea{
+    width: 100%;
+    font-size: 15px;
+    padding: 1em;
+    border: 2px solid partial.$secondaryColor;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0.5em 1em 1em 1em;
+    font-family: partial.$font;
+
+      &::placeholder{
+        color: partial.$textColor;
+      }
+  }
+
+
+  input[type=submit]{
+    @include partial.btn;
+    font-size: 15px;
+    border: none;
+    width: 100%;
+    margin: 0 1em;
+    cursor: pointer;
+  }
+
+  .visually-hidden {
+    border: 0;clip-path: inset(50%);
+    height: 1px;margin: 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  /*Footer styling*/
+
+  footer:nth-of-typer(1){
+    grid-column: 1/6;
+    background-color: partial.$footerColor;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1em 4em;
   }
