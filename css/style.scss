@@ -204,7 +204,7 @@ body{
 
   }
   
-  /*DETTE VIRKER IKKE INGEN BILLEDE*/
+  /*billedet ved siden af den grønne boks med tekst i*/
   .billede{
     grid-column: 5/8;
     background-image: url(../img/presentation.jpg);
@@ -284,10 +284,11 @@ body{
 
   /*Footer styling*/
 
-  footer:nth-of-typer(1){
+  footer:nth-of-type(1){
     grid-column: 1/6;
     background-color: partial.$footerColor;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 1em 4em;
   }
+

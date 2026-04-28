@@ -216,7 +216,7 @@ main .cta-wrapper .cta-bokse {
   border: 2px solid #fff;
 }
 
-/*DETTE VIRKER IKKE INGEN BILLEDE*/
+/*billedet ved siden af den grønne boks med tekst i*/
 .billede {
   grid-column: 5/8;
   background-image: url(../img/presentation.jpg);
@@ -302,7 +302,7 @@ input[type=submit] {
 }
 
 /*Footer styling*/
-footer:nth-of-typer(1) {
+footer:nth-of-type(1) {
   grid-column: 1/6;
   background-color: #0a1f1c;
   display: grid;
